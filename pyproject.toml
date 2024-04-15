@@ -1,0 +1,7 @@
+[project]
+name = "only_prefetch_related_repro"
+version = "0.1.0"
+dependencies = ["django==4.2.11", "pytest", "pytest-django"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "myproject.settings"
