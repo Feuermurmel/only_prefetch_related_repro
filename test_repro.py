@@ -10,8 +10,8 @@ from myproject.models import City
 @pytest.mark.parametrize('qs', [
     Building.objects.prefetch_related("restaurant", "city"),
     Building.objects.only("street_name").prefetch_related("restaurant"),
-    Building.objects.only("street_name").prefetch_related("city", "restaurant"),
-    Building.objects.only("street_name").prefetch_related("restaurant", "city")
+    Building.objects.only("street_name", "city").prefetch_related("city", "restaurant"),
+    Building.objects.only("street_name", "city").prefetch_related("restaurant", "city")
 ])
 def test_repro(db, django_assert_num_queries, qs):
     Restaurant.objects.create(
