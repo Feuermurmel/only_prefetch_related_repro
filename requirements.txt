@@ -6,7 +6,7 @@
 #
 asgiref==3.8.1
     # via django
-django==4.2.11
+django @ https://github.com/django/django/archive/73df8b54a2fab53bec4c7573cda5ad8c869c2fd8.zip
     # via only_prefetch_related_repro (pyproject.toml)
 iniconfig==2.0.0
     # via pytest
